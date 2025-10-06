@@ -1,6 +1,6 @@
 export const environment = {
        production: false,
-    companyName: 'Gifs Test',
+    companyName: 'Gifs Test Fer',
     companyName2: 'App',
     companySlogan: 'Maneje tu gift',
 

@@ -1,1 +1,12 @@
-<p>search-page works!</p>
+<section class="py-5 bg-gray-100">
+  <div class="container mx-auto">
+    <h1 class="text-center text-4xl font-bold mb-8">Encuentra tus gifs</h1>
+    <form class="flex justify-center my-8" (ngSubmit)="gifSearchedService.loadSearchGifs(gifSearchedService.searchTerm())">
+      <input type="text" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg placeholder-gray-400 font-bold" placeholder="Ingresa tu busqueda" [(ngModel)]="gifSearchedService.searchTerm" [ngModelOptions]="{standalone: true}"/>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-lg">Buscar</button>
+    </form>
+
+    <gif-list  [gifs]="gifSearchedService.searchedGifs()"/>
+    
+  </div>
+</section>

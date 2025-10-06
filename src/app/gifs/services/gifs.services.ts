@@ -12,7 +12,7 @@ export class GifsServices {
 
 private http= inject(HttpClient);
 
-trendingGifs=signal<Gif[]>([])
+trendingGifs=signal<Gif[]>([]);
 
 constructor(){
   this.loadTrendingGifs();
@@ -36,6 +36,6 @@ constructor(){
       });
   }
 
-
+  
   
 }
